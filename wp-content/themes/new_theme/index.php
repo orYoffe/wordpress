@@ -51,59 +51,51 @@
 						'post_status'      => 'publish',
 						'suppress_filters' => true 
 						);
-					$posts_array = get_posts( $args );
-					foreach ($posts_array as $key => $post) {
-						$temp =  '<div class="main-header col-sm-2">' . $post->post_content . '</div>';
+						?>
+						<a href="/wordpress/"><div class="main-header"><img class="alignnone  wp-image-18" src="http://localhost:8080/wordpress/wp-content/uploads/2015/07/logo_sheket-300x167.png" alt="logo_sheket" width="76" height="42"> &nbsp; שקט יועצים לאקוסטיקה</div></a>
+						<a href=""><div class="menu-option">סוגי רעש</div></a>
+						<a href=""><div class="menu-option">פרויקטים</div></a>
+						<a href=""><div class="menu-option">מי אנחנו</div></a>
+						<a href=""><div class="menu-option">צור קשר</div></a>
+					</div>
+				</nav>
+			</header>
+			<div id="primary" class="content-area container">
+				<main id="main" class="site-main" role="main">
+
+					<div class="main">
+						<h1>main</h1>
+
+						<?php 
+						$args['category_name'] = 'main';
+						$posts_array = get_posts( $args );
+						foreach ($posts_array as $key => $post) {
+							$temp =  '<div class="post col-sm-12"><div class="post-title">' . $post->post_title . '</div>';
+							$temp .=  '<div class="post-content col-sm-6">' . $post->post_content . '</div>';
+							$temp .=  '<div class="post-date col-sm-6">' . $post->post_date . '</div></div>';
 					// print_r($posts_array[$key]);
-						echo $temp;
-					}
+							echo $temp;
+						}
+						?>
 
-					$args['category_name'] = 'menu';
-					$posts_array = get_posts( $args );
-					foreach ($posts_array as $key => $post) {
-						$temp =  '<div class="site-link col-sm-1">' . $post->post_title . '</div>';
-						echo $temp;
-					}
-					?>
-				</div>
-			</nav>
-		</header>
-		<div id="primary" class="content-area container">
-			<main id="main" class="site-main" role="main">
+					</div>
+					<div class="projects">
+						<h1>projects</h1>
 
-				<div class="main">
-					<h1>main</h1>
+						<?php $args['category_name'] = 'projects';
+						$posts_array = get_posts( $args );
+						foreach ($posts_array as $key => $post) {
+							$temp =  '<div class="post col-sm-12"><div class="post-title">' . $post->post_title . '</div>';
+							$temp .=  '<div class="post-content col-sm-6">' . $post->post_content . '</div>';
+							$temp .=  '<div class="post-date col-sm-6">' . $post->post_date . '</div></div>';
+							echo $temp;
+						}
+						?>
 
-					<?php 
-					$args['category_name'] = 'main';
-					$posts_array = get_posts( $args );
-					foreach ($posts_array as $key => $post) {
-						$temp =  '<div class="post col-sm-12"><div class="post-title">' . $post->post_title . '</div>';
-						$temp .=  '<div class="post-content col-sm-6">' . $post->post_content . '</div>';
-						$temp .=  '<div class="post-date col-sm-6">' . $post->post_date . '</div></div>';
-					// print_r($posts_array[$key]);
-						echo $temp;
-					}
-					?>
-
-				</div>
-				<div class="projects">
-					<h1>projects</h1>
-
-					<?php $args['category_name'] = 'projects';
-					$posts_array = get_posts( $args );
-					foreach ($posts_array as $key => $post) {
-						$temp =  '<div class="post col-sm-12"><div class="post-title">' . $post->post_title . '</div>';
-						$temp .=  '<div class="post-content col-sm-6">' . $post->post_content . '</div>';
-						$temp .=  '<div class="post-date col-sm-6">' . $post->post_date . '</div></div>';
-						echo $temp;
-					}
-					?>
-
-				</div>
-			</main><!-- .site-main -->
-		</div><!-- .content-area -->
-	</div><!-- .site-content -->
+					</div>
+				</main><!-- .site-main -->
+			</div><!-- .content-area -->
+		</div><!-- .site-content -->
 
 	<!-- <footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="site-info">

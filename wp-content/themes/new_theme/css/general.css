@@ -1,3 +1,48 @@
+.navi {
+  margin-bottom: 20px;
+  background-color: #dddddd;
+  display: block;
+  position: relative;
+  min-height: 52px;
+  line-height: 52px;
+  padding: 0 20px;
+}
+
+.navi .main-header {
+  float: right;
+  display: inline-block;
+  color: #333;
+  margin-left: 20px;
+  margin-right: 10px;
+}
+
+.navi .main-header:hover {
+  color: #4d4d4d;
+  cursor: pointer;
+}
+
+.navi .menu-option {
+  -moz-transition: all 0.25s;
+  -o-transition: all 0.25s;
+  -webkit-transition: all 0.25s;
+  transition: all 0.25s;
+  float: right;
+  display: inline-block;
+  margin: 0 2%;
+  padding: 5px 8px;
+  height: 40px;
+  margin-top: 6px;
+  line-height: 30px;
+  border-radius: 5px;
+  color: #333;
+}
+
+.navi .menu-option:hover {
+  background: #ccc;
+  color: #4d4d4d;
+  cursor: pointer;
+}
+
 .post {
   background: #ddd;
   display: block;

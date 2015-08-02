@@ -1,3 +1,47 @@
+@import 'functions';
+
+.navi {
+	margin-bottom: 20px;
+	background-color: #dddddd;
+	display: block;
+	position: relative;
+	min-height: 52px;
+	line-height: 52px;
+	padding: 0 20px;
+
+	.main-header {
+		float: right;
+		display: inline-block;
+		color: #333;
+		margin-left: 20px;	
+		margin-right: 10px;
+
+		&:hover {
+			color: lighten(#333,10%);
+			cursor: pointer;
+		}
+	}
+
+	.menu-option {
+		@include transition;
+		float: right;
+		display: inline-block;
+		margin: 0 2%;
+		padding: 5px 8px;
+		height: 40px;
+		margin-top: 6px;
+		line-height: 30px;
+		border-radius: 5px;
+		color: #333;
+
+		&:hover {
+			background: #ccc;
+			color: lighten(#333,10%);
+			cursor: pointer;
+		}
+	}
+}
+
 .post {
 	background: #ddd;
 	display: block;
@@ -19,3 +63,4 @@
 		color: #2266FF;
 	}
 }
+

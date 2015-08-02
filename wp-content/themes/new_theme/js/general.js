@@ -1,7 +1,7 @@
 (function() {
-	console.log('started script');
+console.log('started script');
 
 
-	console.log('finished script');
+console.log('finished script');
 
-});
+})();
