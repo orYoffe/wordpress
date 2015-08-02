@@ -1,0 +1,10 @@
+.post {
+	padding: 20px;
+	margin: 20px;
+	border: 1px solid green;
+}
+
+.post-title {
+	font-size: 25px;
+	text-decoration: underline;
+}
